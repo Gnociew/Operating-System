@@ -1,0 +1,771 @@
+<!DOCTYPE html><html><head>
+      <title>OSmid</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\86182\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="操作系统">操作系统 </h1>
+<h2 id="引言">引言 </h2>
+<h3 id="第二章-操作系统介绍">第二章 操作系统介绍 </h3>
+<h4 id="操作系统的定义和作用">操作系统的定义和作用 </h4>
+<p>操作系统是应用程序和硬件之间的核心系统软件</p>
+<ul>
+<li>
+<h5>提供了访问资源的通用功能</h5>
+<ul>
+<li>抽象了硬件，提供对资源的标准化接口（接口API/系统调用/标准库）</li>
+<li>响应资源访问请求</li>
+</ul>
+</li>
+<li>
+<h5>管理：在应用程序间共享（有限的）资源</h5>
+<ul>
+<li>处理访问控制</li>
+<li>调度当前正在执行的进程（提供对资源的高效和公平的访问）</li>
+<li>管理硬件资源</li>
+<li>隔离：保护应用程序免受彼此的影响
+<ul>
+<li>应用程序之间、程序与操作系统之间、进程之间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="操作系统管理">操作系统管理： </h4>
+<ul>
+<li>CPU：<br>
+初始化程序计数器/寄存器，共享 CPU</li>
+<li>程序内存：<br>
+初始化进程地址空间，加载程序（代码、数据、堆、栈）</li>
+<li>设备：<br>
+从/写入磁盘；设备驱动程序是硬件特定的，抽象为公共接口</li>
+</ul>
+<h4 id="用户模式">用户模式 </h4>
+<ul>
+<li>不能发起对磁盘的 I/O 请求</li>
+<li>不能访问任何物理内存页</li>
+<li>不能在网络上发送数据包</li>
+<li>user mode --trap--&gt; trap handler , kernel mode --return from trap --&gt; user mode</li>
+</ul>
+<h2 id="第一部分虚拟化">第一部分：虚拟化 </h2>
+<h2 id="关于-cpu-的虚拟化">关于 CPU 的虚拟化 </h2>
+<h3 id="第四章-抽象进程">第四章 抽象：进程 </h3>
+<h4 id="真实现状">真实现状 </h4>
+<ul>
+<li>CPU 执行无尽的指令流（存储在内存中）</li>
+<li>所有系统内存位于连续的物理地址空间中</li>
+<li>磁盘是有限的一组块</li>
+</ul>
+<p>处理并发程序 --&gt; 分离不同程序的执行，提供每个程序都是唯一正在运行的程序的幻觉/假象 --&gt; 虚拟进程抽象</p>
+<h4 id="程序-vs-进程-vs-线程">程序 VS 进程 VS 线程 </h4>
+<ul>
+<li>程序
+<ul>
+<li>由静态代码和数据组成，存储在磁盘上</li>
+</ul>
+</li>
+<li>进程
+<ul>
+<li>程序的一个实例</li>
+<li>一个进程由一个地址空间、相关的内核状态（例如打开的文件、网络通道）和一个或多个执行线程组成</li>
+<li>一个进程是在进程状态上下文中的一个执行流。执行流是执行指令的序列（即“控制线程”）。进程状态涵盖了执行指令可能影响或受到影响的所有内容（例如，寄存器、地址空间、持久状态，如文件）</li>
+<li>进程创建过程<br>
+<img src="进程创建过程.jpg" height="300px"></li>
+<li>进程以单个执行线程和一个地址空间开始,可以在同一地址空间中启动多个线程执行。</li>
+</ul>
+</li>
+<li>线程
+<ul>
+<li>进程可以在相同的地址空间中拥有多个线程（在相同数据上进行计算）</li>
+<li>每个线程都有自己的堆栈，但它们共享全局数据、代码和堆。</li>
+<li>一个线程包括堆栈和寄存器状态（堆栈指针、代码指针、其他寄存器）。</li>
+</ul>
+</li>
+<li>进程 VS 线程<br>
+两个读取地址 0xc0f3 （虚拟地址）的进程可能读取不同的值，而同一进程中的两个线程将读取相同的值。</li>
+</ul>
+<h4 id="共享资源的两种形式">共享资源的两种形式 </h4>
+<ul>
+<li>时分共享(time sharing)：独占使用，逐个执行<br>
+eg.虚拟化 CPU（任务间交替执行）</li>
+<li>空分共享(space sharing)：每个人始终获得一部分<br>
+eg.内存、磁盘空间</li>
+</ul>
+<h4 id="虚拟化-cpu">虚拟化 CPU </h4>
+<ul>
+<li>目标：给每个进程提供独占 CPU 访问的幻觉</li>
+<li>现实：CPU 是所有进程共享的资源</li>
+<li>实现：时分共享（有性能损失）</li>
+<li>具体实现：
+<ul>
+<li>低级机制(mechanism)
+<ul>
+<li>如何如何从从一个进程切换到另一个进程</li>
+<li>一些低级方法或协议来实现所需功能（上下文切换/context switch）</li>
+</ul>
+</li>
+<li>高级智能
+<ul>
+<li>一些智能以策略 (policy) 的形式存在</li>
+<li>策略是在操作系统内做出某种决定的算法，选择运行哪个进程</li>
+<li>eg. 调度策略 (scheduling policy)<br>
+（历史信息、工作负载知识、性能指标）</li>
+</ul>
+</li>
+<li>策略和机制之间的区别实现了模块化。调度策略独立于上下文切换功能。</li>
+</ul>
+</li>
+</ul>
+<h4 id="操作系统提供进程抽象">操作系统提供进程抽象 </h4>
+<ul>
+<li>当用户执行一个程序时，操作系统会创建一个进程。</li>
+<li>操作系统在多个进程之间进行 CPU 的时间共享。</li>
+<li>操作系统调度器选择一个可执行进程来运行。
+<ul>
+<li>调度器必须维护一个进程列表</li>
+<li>调度器必须为策略维护元数据</li>
+</ul>
+</li>
+</ul>
+<h4 id="进程的机器状态">进程的机器状态 </h4>
+<p>即程序在运行时可以读取或更新的内容：</p>
+<ul>
+<li>进程可访问的内存（地址空间/address space）<br>
+指令、正在运行的程序读取和写入的数据</li>
+<li>寄存器
+<ul>
+<li>程序计数器（Program Counter，PC）（有时称指令指针，IP）<br>
+指示程序即将执行的指令</li>
+<li>栈指针、相关的帧指针<br>
+管理函数参数栈、局部变量和返回地址</li>
+</ul>
+</li>
+<li>持久存储设备<br>
+此类 I/O 信息可能包含当前打开的文件和其他资源</li>
+</ul>
+<h4 id="进程创建">进程创建 </h4>
+<ul>
+<li>
+<h5>操作系统分配内部数据结构</h5>
+</li>
+<li>
+<h5>操作系统分配地址空间</h5>
+<ul>
+<li>从磁盘加载代码、数据
+<ul>
+<li>早期：加载过程尽早（eagerly）完成</li>
+<li>现代：惰性（lazily），仅在程序执行期间需要加载的代码或数据片段才会加载</li>
+</ul>
+</li>
+<li>创建运行时堆栈、堆
+<ul>
+<li>栈：局部变量、函数参数和返回地址</li>
+<li>堆：显式请求的动态分配数据</li>
+<li>用参数初始化栈（将 argc 和 argv 填入 main() 函数）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5>操作系统打开基本文件</h5>
+默认情况下每个进程都有三个打开的文件描述符：STDIN、STDOUT、STDERR</li>
+<li>
+<h5>操作系统初始化 CPU 寄存器</h5>
+</li>
+<li>
+<h5>启动程序</h5>
+入口：main()</li>
+</ul>
+<h4 id="进程状态及其转换">进程状态及其转换 </h4>
+<ul>
+<li>
+<h5>进程状态</h5>
+<ul>
+<li>运行中（running）：该进程当前正在执行</li>
+<li>准备就绪（ready）：该进程准备好执行（并将在策略决定时进行调度）</li>
+<li>阻塞（blocked）：该进程被挂起（例如，等待某个动作；当该动作完成时，操作系统将取消阻塞）</li>
+<li>初始（init）：该进程正在创建中（以确保它不会被调度）</li>
+<li>最终（final）：该进程已终止但未清理（eg.如果父进程尚未读取返回值）</li>
+</ul>
+</li>
+<li>
+<h5>进程状态转换</h5>
+  <img src="进程状态转换.png" height="200px">
+</li>
+<li>
+<p>保持 CPU 繁忙 --&gt; 提高资源利用率</p>
+</li>
+<li>
+<p>如果所有进程都被阻塞，应该调度空闲进程。</p>
+<ul>
+<li>现代内核使用低优先级的空闲进程，如果没有其他进程准备就绪，它将被调度并执行。</li>
+<li>空闲进程不会阻塞或执行任何 I/O。</li>
+<li>如果没有空闲进程，调度器将不得不检查是否没有进程准备就绪，并且将不得不保守地采取行动。空闲进程保证了始终至少有一个可运行的进程。</li>
+</ul>
+</li>
+</ul>
+<h4 id="进程数据结构">进程数据结构 </h4>
+<ul>
+<li>操作系统维护活动进程的数据结构（数组/列表），存储在操作系统内核中。</li>
+<li>每个进程的信息存储在进程控制块中，其中包含：
+<ul>
+<li>进程标识符（PID）</li>
+<li>进程状态（例如，准备就绪）</li>
+<li>指向父进程的指针（cat /proc/self/status）</li>
+<li>CPU 上下文（如果进程未运行）</li>
+<li>地址空间指针（cat /proc/self/maps）</li>
+<li>打开文件列表的指针（文件描述符，cat /proc/self/fdinfo/*）</li>
+</ul>
+</li>
+<li>当一个进程停止：
+<ul>
+<li>它的寄存器被保存到固定内存位置（寄存器上下文）</li>
+<li>恢复寄存器（将其写入到实际的物理寄存器中）</li>
+<li>该进程恢复</li>
+</ul>
+</li>
+</ul>
+<h4 id="请求操作系统服务">请求操作系统服务 </h4>
+<ul>
+<li>进程可以通过系统调用 API（应用程序编程接口）请求服务。</li>
+<li>系统调用将执行转移到操作系统（启用特权操作）。</li>
+<li>敏感操作（例如，硬件访问、原始内存访问）需要特权。</li>
+<li>一些系统调用（例如，read、write）可能会导致进程阻塞，从而允许操作系统调度其他进程。</li>
+<li>库（libc）隐藏了系统调用的复杂性，将操作系统功能导出为常规函数调用。</li>
+</ul>
+<h3 id="第五章-进程-api">第五章 进程 API </h3>
+<h4 id="操作系统接口必须包含">操作系统接口必须包含： </h4>
+<ul>
+<li>
+<h5>创建（create）</h5>
+<ul>
+<li>UNIX ：fork() 系统调用<br>
+Windows ：CreateProcess() 函数</li>
+</ul>
+</li>
+<li>
+<h5>销毁（destroy）</h5>
+<ul>
+<li>UNIX ：exit() 系统调用<br>
+Windows ：ExitProcess() 函数</li>
+</ul>
+</li>
+<li>
+<h5>等待（wait）</h5>
+<ul>
+<li>wait() / waitpid()</li>
+</ul>
+</li>
+<li>
+<h5>其他控制（miscellaneous control）</h5>
+<ul>
+<li>自愿阻塞 sleep()、替换程序 exec()、信号处理 signal()、时间设置setitimer()</li>
+</ul>
+</li>
+<li>
+<h5>状态（status）</h5>
+<ul>
+<li>ps() ：查看当前在运行的进程</li>
+<li>top 工具 ：展示当前系统中进程消耗 CPU 或其他资源的情况</li>
+</ul>
+</li>
+</ul>
+<h4 id="fork">fork() </h4>
+<ul>
+<li>父进程调用 fork() 系统调用，内核（操作系统）创建一个新的进程，称为子进程。它与父进程几乎完全相同。</li>
+<li>父进程和子进程都从 fork() 调用返回。在父进程中，返回子进程的 PID；在子进程中，返回 0。</li>
+<li>子进程拥有自己的地址空间（私有内存）、寄存器、程序计数器等；
+<ul>
+<li>写时复制（Copy-On-Write）机制</li>
+</ul>
+</li>
+<li>操作系统安排父进程和子进程交替执行。</li>
+</ul>
+<h4 id="wait--waitpid">wait() / waitpid() </h4>
+<ul>
+<li>子进程与其父进程绑定。</li>
+<li>子进程调用 exit(int retval) ，父进程 wait() 得到一个返回值参数。</li>
+<li>父进程等待子进程终止再执行。</li>
+</ul>
+<h4 id="exec">exec() </h4>
+<ul>
+<li>让子进程执行与父进程不同的程序</li>
+<li>exec() 替换地址空间，从磁盘加载新程序。
+<ul>
+<li>从可执行程序中加载代码和静态数据，覆盖自己代码段及静态数据</li>
+<li>堆、栈及其它内存空间也会被重新初始化</li>
+<li>进程 ID 不变</li>
+<li>文件描述符 STDIN、STDOUT、STDERR 保留，允许父进程重定向/重新连接子进程的输出</li>
+<li>eg.在 Unix 系统中执行 shell 命令时，实际上是由 shell 进程调用 exec() 系统调用来执行指定的程序</li>
+</ul>
+</li>
+<li>程序可以传递命令行参数和环境</li>
+<li>对 exec() 的成功调用永远不会返回</li>
+</ul>
+<h4 id="为什么需要-fork-和-exec">为什么需要 fork() 和 exec()？ </h4>
+<p>假设用户想要启动一个不同的程序。为此，操作系统需要创建一个新进程并创建一个新的地址空间来加载程序。<br>
+使用分而治之的方法：</p>
+<ul>
+<li>fork() 创建一个带有此地址空间副本的新进程</li>
+<li>exec() 为程序创建一个新的地址空间</li>
+<li>clone() 向此地址空间添加一个线程（执行线程）
+<ul>
+<li>新线程与调用线程共享地址空间，但有自己的栈空间和执行线程的上下文</li>
+</ul>
+</li>
+</ul>
+<h3 id="第六章-机制受限直接执行">第六章 机制：受限直接执行 </h3>
+<h4 id="直接在-cpu-上运行程序存在的问题">直接在 CPU 上运行程序存在的问题？ </h4>
+<ul>
+<li>进程可能做一些非法的事情（读写不属于进程的内存、直接访问硬件）</li>
+<li>进程可能永远运行下去（操作系统必须保持控制）</li>
+<li>进程可能执行一些慢的操作，例如 I/O（操作系统可能希望切换到另一个进程）</li>
+</ul>
+<h4 id="构建-cpu-虚拟化机制时存在挑战">构建 CPU 虚拟化机制时存在挑战： </h4>
+<ul>
+<li>
+<h5>性能：如何在不增加系统开销的情况下实现虚拟化？</h5>
+<ul>
+<li>
+<h5>受限直接执行（limited direct execution）：</h5>
+  <img src="直接运行协议.jpg" height="200px">
+<ul>
+<li>
+<p>优势：快速</p>
+</li>
+<li>
+<p>问题：进程可能做非法的事 --限制--&gt; 进程希望执行受限操作怎么办？</p>
+<ul>
+<li>受保护的控制权转移（user mode -&gt; kernel mode）：系统调用</li>
+<li>陷入内核、从陷阱返回
+<ul>
+<li>执行陷阱时硬件必须确保存储足够的调用者寄存器，以便在操作系统发出从陷阱返回指令时能够正确返回。</li>
+<li>eg.x86，处理器会将程序计数器、标志和其他一些寄存器推送到每个进程的内核栈上。从陷阱返回时将从栈中弹出这些值并恢复执行用户模式程序。</li>
+<li>
+<h5>陷阱表</h5>
+机器启动时在内核模式下执行，操作系统首先告诉硬件在发生某些异常事件时要运行哪些代码。<br>
+执行指令告诉硬件陷阱表的位置也是特权操作。</li>
+</ul>
+</li>
+</ul>
+  <img src="LDE协议.jpg" height="450px">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5>控制权：如何有效地运行进程，同时保留对 CPU 地控制？</h5>
+<ul>
+<li>
+<p>协作方式：等待系统调用</p>
+<ul>
+<li>被动等待程序放弃控制权 <code>yield()</code>、系统调用、程序执行了非法操作</li>
+</ul>
+</li>
+<li>
+<p>非协作方式：操作系统进行控制</p>
+<ul>
+<li>
+<h5>时间中断 (timer interrupt)：硬件功能</h5>
+每隔几毫秒产生一次中断，操作系统预先配置中断处理程序，启动过程中先启动时钟。
+<ul>
+<li>操作系统必须通知硬件哪些代码在发生时间中断时运行</li>
+<li>操作系统要在中断发生时为正在运行的程序保存足够的状态，以便从陷阱返回后能正确恢复正在运行的程序</li>
+</ul>
+</li>
+<li>
+<h5>保存和恢复上下文</h5>
+<ul>
+<li>上下文切换<br>
+将正在运行的进程状态保存在内核结构中，恢复下一个进程的状态，将控制传递给下一个进程并“返回”。<br>
+对进程来说，上下文切换是透明的。
+<ul>
+<li>执行一些底层汇编代码实现</li>
+<li>切换内容：通用寄存器、程序计数器、当前进程的内核栈指针</li>
+</ul>
+</li>
+<li>进行上下文切换的原因：
+<ul>
+<li>进程完成/退出</li>
+<li>进程执行慢速硬件操作（从磁盘加载），操作系统切换到另一个准备好的任务</li>
+<li>硬件需要操作系统的帮助并发出中断</li>
+<li>操作系统决定抢占任务并切换到另一个任务（即进程已经用完了它的时间片）</li>
+</ul>
+</li>
+<li>上下文切换的成本：
+<ul>
+<li>保存和恢复寄存器的操作系统操作</li>
+<li>程序运行时在 CPU 高速缓存、TLB、分支预测器和其他片上硬件中建立了大量的状态。切换到另一个工作会导致此状态被刷新，且与当前运行的作业相关的新状态被引进</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  <img src="时间中断.jpg" height="370px">
+<ul>
+<li>两种类型的寄存器保存/恢复
+<ul>
+<li>时间中断时<br>
+运行进程的用户寄存器由硬件隐式保护，使用该进程的内核栈</li>
+<li>操作系统决定从 A 换到 B 时<br>
+内核寄存器被 OS 明确保存，存储在该进程的进程结构的内存中（在内核空间，但不是该进程的内核栈）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="进程隔离">进程隔离 </h4>
+<ul>
+<li>在大多数操作系统上，进程时：
+<ul>
+<li>互相隔离的</li>
+<li>与操作系统隔离的</li>
+</ul>
+</li>
+<li>隔离是安全性的核心要求：
+<ul>
+<li>将错误限制在进程内部</li>
+<li>启用权限隔离</li>
+<li>启用区隔化（将复杂系统分解为独立的错误域）</li>
+</ul>
+</li>
+<li>
+<h5>进程隔离机制</h5>
+<ul>
+<li>虚拟内存：每个进程一个（虚拟）地址空间</li>
+<li>不同的执行模式：操作系统以更高的特权级别执行
+<ul>
+<li>进程在用户模式下执行（x86 架构上的 ring 3）</li>
+<li>操作系统在超级模式下执行（x86 架构上的 ring 0）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第七章-进程调度介绍">第七章 进程调度：介绍 </h3>
+<h4 id="关于调度的两个问题">关于调度的两个问题 </h4>
+<ul>
+<li>
+<h5>如何从一个进程切换到另一个进程</h5>
+<ul>
+<li>切换机制：上下文切换</li>
+<li>保持控制机制：抢占（时间中断）</li>
+</ul>
+</li>
+<li>
+<h5>下一个应该运行的是什么进程</h5>
+<ul>
+<li>策略：调度</li>
+</ul>
+</li>
+</ul>
+<h4 id="调度指标">调度指标 </h4>
+<ul>
+<li>
+<h5>利用率</h5>
+CPU 执行程序的时间占总时间的比例（目标：最大化）</li>
+<li>
+<h5>周转时间</h5>
+完成时间 - 到达时间（目标：最小化）</li>
+<li>
+<h5>响应时间</h5>
+调度时间 - 到达时间（目标：最小化）</li>
+<li>
+<h5>公平性</h5>
+所有进程在一段时间内获得相同数量的 CPU （目标：无饥饿）</li>
+<li>
+<h5>进展</h5>
+允许进程向前推进（目标：最小化内核中断）</li>
+</ul>
+<h4 id="调度策略">调度策略 </h4>
+<ul>
+<li>
+<h4>非抢占式</h4>
+非抢占式调度器只有在当前进程自愿放弃 CPU 时才会切换到另一个进程。
+<ul>
+<li>
+<h5>先进先出(FIFO) / 先到先服务(FCFS)</h5>
+<ul>
+<li>简单、易于实现</li>
+<li>造成护航效应：一些耗时较少的潜在资源消费者被排在重量级资源消费者后面</li>
+<li>长时间运行的任务排在前面会影响响应时间、周转时间</li>
+</ul>
+</li>
+<li>
+<h5>最短任务优先(SJF)</h5>
+<ul>
+<li>选择具有最短运行时间的就绪任务</li>
+<li>对平均周转时间好</li>
+<li>如果工作不是同时到达？长时间工作先到达？</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4>抢占式</h4>
+抢占式调度器可以在任何时候获取 CPU 控制权，根据调度策略切换到另一个进程。
+<ul>
+<li>
+<h5>最短完成时间优先(STCF)</h5>
+<ul>
+<li>向 SJF 添加抢占，每当新工作进入系统时，确定剩余工作和新工作中，谁的剩余时间最少，然后调度该工作。</li>
+<li>大大提高平均周转时间</li>
+<li>对响应时间不敏感</li>
+</ul>
+</li>
+<li>
+<h5>轮转(RR)</h5>
+<ul>
+<li>RR 在一个时间片(time slide)内运行一个工作，然后切换到运行队列中的下一个任务，反复执行直到所有任务完成。</li>
+<li>时间片长度必须是时间中断周期的倍数</li>
+<li>时间片长度
+<ul>
+<li>越短响应时间表现越好，但上下文切换的成本将影响整体性能</li>
+<li>需要权衡，长度足够摊销上下文切换成本又不会使响应不及时</li>
+</ul>
+</li>
+<li>响应时间好，但周转时间非常糟糕</li>
+<li>公平与周转时间往往需要权衡</li>
+</ul>
+</li>
+<li>
+<h4>结合 I/O</h4>
+<ul>
+<li>当前正在运行的作业在 I/O 期间不会使用 CPU，它被阻塞等待 I/O 完成</li>
+<li>在 I/O 期间运行别的作业，实现重叠</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>事实上操作系统通常对每个作业的长度知之甚少</li>
+</ul>
+<h3 id="第八章-调度多级反馈列表mlfq">第八章 调度：多级反馈列表(MLFQ) </h3>
+<ul>
+<li>挑战：<br>
+调度器必须支持长时间运行的后台任务（批处理进程）和低延迟的前台任务（交互式进程）。
+<ul>
+<li>批处理进程：响应时间不重要，关注长时间运行（减少上下文切换成本，关注大量 CPU，不关注时间）</li>
+<li>交互式进程：响应时间至关重要，短暂突发（上下文切换成本不重要，不需要太多 CPU 但频繁）</li>
+</ul>
+</li>
+</ul>
+<p>缺少工作长度的先验知识，优化周转时间的同时降低响应时间 -&gt; MLFQ</p>
+<ul>
+<li>MLFQ 中有许多独立的队列，每个队列有不同的优先级</li>
+<li>任何时刻，一个工作只能存在于一个队列中</li>
+</ul>
+<h4 id="mlfq-基本规则">MLFQ: 基本规则 </h4>
+<ul>
+<li>
+<h5>如果 A 的优先级 &gt; B 的优先级，运行 A （不运行 B ）</h5>
+</li>
+<li>
+<h5>如果 A 的优先级 = B 的优先级，轮转运行 A 和 B</h5>
+</li>
+<li>
+<h5>工作进入系统时，放在最高优先级（最上层队列）</h5>
+</li>
+<li>
+<p>旧版<br>
+（交互式进程保持高优先级，降低长时间占用 CPU 的进程的优先级）</p>
+<ul>
+<li>工作用完整个时间片后，降低其优先级（移入下一个队列）</li>
+<li>如果工作在其时间片以内主动释放 CPU，则优先级不变</li>
+</ul>
+<p>新版</p>
+<ul>
+<li>
+<h5>一旦工作用完了其在某一层中的时间配额（无论中间主动放弃多少次 CPU），就降低其优先级（移入下一级队列）</h5>
+</li>
+</ul>
+</li>
+<li>
+<h5>经过一段时间 S，就将系统中所有工作重新加入最高优先级队列</h5>
+<p>解决的饥饿问题<br>
+S：太高，长工作饥饿；太低，交互性工作得不到合适的 CPU 时间比例</p>
+</li>
+</ul>
+<h3 id="第九章-调度比例份额">第九章 调度：比例份额 </h3>
+<h4 id="比例份额">比例份额 </h4>
+<ul>
+<li>调度程序的终极目标，是确保每个工作获得一定比例的 CPU 时间，而不是优化周转时间和响应时间</li>
+</ul>
+<h4 id="彩票调度">彩票调度 </h4>
+<ul>
+<li>
+<h5>基本思想</h5>
+为进程发放针对系统各种资源 (如 CPU 时间) 的彩票，当调度程序需作出决策时，随机选择一张彩票，持有该彩票的进程将获得系统资源</li>
+<li>中奖的机会与其持有的彩票数量成正比
+<ul>
+<li>被调度的机会与持有的票数成正比</li>
+</ul>
+</li>
+<li>合作进程如果愿意的话可以交换、转让（会归还）彩票、彩票通胀</li>
+<li>自动地按照正确的比例分配 CPU 资源</li>
+<li>随机方法：
+<ul>
+<li>避免奇怪的边角情况</li>
+<li>轻量，不需要记录任何状态</li>
+<li>快</li>
+</ul>
+</li>
+<li>把进程列表按彩票数递减排序可以提高效率</li>
+<li>执行时间短时，平均不公平度非常糟糕，执行多时才能得到期待的结果</li>
+</ul>
+<h4 id="步长调度非随机">步长调度（非随机） </h4>
+<ul>
+<li>系统中的每个工作都有自己的步长，这个值和票数值成反比</li>
+<li>调度程序使用进程的步长及行程值来确定调度哪个进程
+<ul>
+<li>当需要进行调度时，选择目前拥有最小形成值的进程，并且在运行之后将该进程的行程值增加一个步长</li>
+</ul>
+</li>
+<li>需要全局状态（加入的新进程行程值？）</li>
+</ul>
+<h4 id="完全公平调度程序cfs">完全公平调度程序(CFS) </h4>
+<ul>
+<li>
+<h5>思想</h5>
+每个任务并行运行，并消耗相等的 CPU 时间份额</li>
+<li>
+<h5>方法</h5>
+计算进程在理想处理器上获得的时间</li>
+<li>示例<br>
+假设有 4 个进程准备就绪，因此它们每个将获得 CPU 的 1/4（将此时间添加到记账中）</li>
+<li>
+<h5>虚拟运行时间</h5>
+任务的虚拟运行时间指定了其下一个时间片将开始执行的时间。实际上，任务的虚拟运行时间是基于运行的任务总数对实际运行时间的归一化操作</li>
+<li>实现：将所有进程保留在红黑树中，按最大执行时间排序（跟踪其正余额）</li>
+<li>调度
+<ul>
+<li>调度最左边的进程（具有最高余额的进程）</li>
+<li>如果进程退出，则将其从调度树中移除</li>
+<li>在中断（时间片结束或 I/O）时，将进程重新插入树中的新位置</li>
+<li>重复</li>
+</ul>
+</li>
+</ul>
+<h2 id="关于内存的虚拟化">关于内存的虚拟化 </h2>
+<h3 id="第十三章-抽象地址空间">第十三章 抽象：地址空间 </h3>
+<h4 id="虚拟化">虚拟化 </h4>
+<ul>
+<li>目标：将进程（及其故障）彼此隔离。<br>
+虚拟化使隔离成为可能。一个进程必须被禁止访问另一个进程的内存/寄存器。</li>
+<li>步骤
+<ul>
+<li>虚拟 CPU 提供私有 CPU 寄存器的幻觉（机制和策略）</li>
+<li>虚拟 RAM 提供私有内存的幻觉</li>
+</ul>
+</li>
+</ul>
+<h4 id="地址空间">地址空间 </h4>
+<p>每个进程都有一组地址，映射到数据（即，从指针到字节的映射），包含运行的程序的所有内存状态</p>
+<ul>
+<li>静态：代码、全局变量</li>
+<li>动态：堆（向下生长）、栈（向上生长）
+<ul>
+<li>栈：保存当前的函数调用信息、分配空间给局部变量、传递参数和返回值</li>
+<li>堆：管理动态分配的、用户管理的内存
+<ul>
+<li>需要动态内存的原因
+<ul>
+<li>所需内存量可能依赖于任务</li>
+<li>输入大小可能在编译时未知</li>
+<li>保守的预分配将是浪费的</li>
+<li>函数调用（调用帧）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="虚拟化内存">虚拟化内存 </h4>
+<ul>
+<li>
+<h5>目标</h5>
+<ul>
+<li>透明（隐身）<br>
+操作系统实现虚拟内存的方式，应该让运行的程序看不见</li>
+<li>效率</li>
+<li>保护<br>
+操作系统应确保进程受到保护，不会受其他进程影响，操作系统本身也不会受进程影响</li>
+</ul>
+</li>
+<li>
+<h5>挑战</h5>
+我们如何可以并行运行多个程序？
+<ul>
+<li>地址在代码中被硬编码</li>
+<li>静态分配？如果同一任务执行</li>
+</ul>
+</li>
+<li>
+<h5>可能的共享机制</h5>
+<ul>
+<li>时间共享</li>
+<li>静态重定位/分配</li>
+<li>基址（+ 边界）</li>
+<li>分段</li>
+<li>虚拟内存</li>
+</ul>
+</li>
+</ul>
+<h3 id="第十四章-插叙内存操作-api">第十四章 插叙：内存操作 API </h3>
+<h4 id="过程调用帧">过程调用帧 </h4>
+<p>调用函数会分配一个调用帧 (在栈中分配一块内存)，用来存储所有局部变量和返回给调用者的必要上下文。</p>
+<ul>
+<li>栈使函数调用帧的存储变得简单</li>
+<li>存储调用上下文和活动父级帧的序列</li>
+<li>在函数序言中分配内存，在返回时释放</li>
+<li>函数返回时前，下一个函数初始化其数据时会覆盖一个函数的数据</li>
+</ul>
+<h4 id="内存类型">内存类型 </h4>
+<ul>
+<li>栈内存<br>
+申请和释放操作都是编译器隐式管理的</li>
+<li>堆内存<br>
+申请和释放操作都由程序员显式完成</li>
+</ul>
+<h4 id="堆与操作系统的交互">堆与操作系统的交互 </h4>
+<ul>
+<li>操作系统将一个大块内存交给进程以存储堆对象</li>
+<li>运行时库（libc）管理这个块</li>
+<li>内存分配器旨在提高性能、可靠性或安全性</li>
+</ul>
+<h3 id="第十五章-机制地址转换">第十五章 机制：地址转换 </h3>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

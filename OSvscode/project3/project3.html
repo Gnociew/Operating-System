@@ -1,0 +1,469 @@
+<!DOCTYPE html><html><head>
+      <title>project3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\86182\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="华东师范大学数据学院实验报告">华东师范大学数据学院实验报告 </h1>
+<table>
+  <tbody><tr>
+    <td>课程名称 ：操作系统</td>
+    <td>年级：2022级</td>
+    <td>上机实践成绩：</td>
+  </tr>
+  <tr>
+    <td>指导教师：翁楚良</td>
+    <td>姓名：刘蔚璁</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>上机实践名称：页表 </td>
+    <td>学号：10225501443</td>
+    <td>上机实践日期：2024.5</td>
+  </tr>
+</tbody></table>
+<h2 id="一-实验目的">一、实验目的 </h2>
+<ul>
+<li>学习页表的实现机制，用户拷贝数据到内核态的方法</li>
+</ul>
+<h2 id="二-实验内容">二、实验内容 </h2>
+<ul>
+<li>加速 getpid()</li>
+<li>递归遍历页表，碰到有效的就遍历进下一层页表，打印页表内容</li>
+</ul>
+<h2 id="三-实验环境">三、实验环境 </h2>
+<p>VSCode</p>
+<h2 id="四-实验过程及结果">四、实验过程及结果 </h2>
+<h3 id="预备知识">预备知识 </h3>
+<p>在开始实验前，需要先了解一下页表的相关知识。</p>
+<h4 id="内存管理方法">内存管理方法 </h4>
+<ul>
+<li><strong>分段</strong><br>
+将虚拟内存空间划分为代码、堆、栈等多个逻辑段，分别为每个逻辑段维护一对基址—界限寄存器。<br>
+存在严重的内、外部碎片问题。</li>
+<li><strong>分页</strong><br>
+将虚拟内存空间切成固定长度的分片，每个固定长度的单元称之为页（Page），将物理内存看成是定长槽块的阵列，这些槽块大小与页相同，每个槽块叫做页帧（Page Frame），每个页帧都可以装载一个虚拟内存页。<br>
+xv6采用分页的手段来构建虚拟内存系统，提供页表完成虚拟地址到物理地址的转换。</li>
+</ul>
+<h4 id="页表翻译">页表翻译 </h4>
+<img src="页表翻译.jpg" height="333px">
+<p>如图 2-1 所示，实际上，地址的翻译有两个步骤。一个页表在物理内存中像一棵两层的树。树的根是一个 4096 字节的页目录，其中包含了 1024 个类似 PTE 的条目，但其实每个条目是指向一个页表页的引用。而每个页表页又是包含 1024 个 32 位 PTE 的数组。</p>
+<ul>
+<li>分页硬件使用虚拟地址的高 10 位来决定对应页目录条目。</li>
+<li>如果想要的条目已经放在了页目录中，分页硬件就会继续使用接下来的 10 位来从页表页中选择出对应的 PTE。否则，分页硬件就会抛出错误。通常情况下，大部分虚拟地址不会进行映射，而这样的二级结构就使得页目录可以忽略那些没有任何映射的页表页。</li>
+</ul>
+<p>每个 PTE 都包含一些标志位，说明分页硬件对应的虚拟地址的使用权限。（这些的标志位和页表硬件相关的结构体都在 mmu.h 定义）</p>
+<ul>
+<li>PTE_P 表示 PTE 是否陈列在页表中：如果不是，那么一个对该页的引用会引发错误（也就是：不允许被使用）。</li>
+<li>PTE_W 控制着能否对页执行写操作；如果不能，则只允许对其进行读操作和取指令。</li>
+<li>PTE_U 控制着用户程序能否使用该页；如果不能，则只有内核能够使用该页。</li>
+</ul>
+<h4 id="xv6">xv6 </h4>
+<p>每个进程都有自己的页表，xv6 会在进程切换时通知分页硬件切换页表。页表将虚拟地址（x86 指令所使用的地址）映射为物理地址（处理器芯片向主存发送的地址）。</p>
+<ul>
+<li>
+<h5>进程</h5>
+<p>进程是一个抽象概念，它让一个程序可以假设它独占一台机器，xv6 使用页表（由硬件实现）来为每个进程提供其独有的地址空间。<br>
+一个 xv6 进程分为：</p>
+<ul>
+<li>用户内存空间（指令、数据、栈）</li>
+<li>仅对内核可见的进程状态</li>
+</ul>
+<p>在xv6中，对进程控制块 <code>struct proc</code> 的定义和相关的操作函数实现，例如进程的初始化、创建和销毁等主要在 <code>proc.c</code> 中实现。<br>
+每个进程都有一个结构体 <code>struct proc</code>，来维护一个进程的状态，其中最为重要的状态是进程的页表，内核栈，当前运行状态，在 <code>proc.h</code> 中定义：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-struct">struct</span> <span class="token class-name">proc</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-struct">struct</span> <span class="token class-name">spinlock</span> lock<span class="token punctuation">;</span>       <span class="token comment">// 进程锁，用于保护进程结构的并发访问</span>
+
+    <span class="token comment">// p-&gt;lock must be held when using these:</span>
+    <span class="token keyword keyword-enum">enum</span> <span class="token class-name">procstate</span> state<span class="token punctuation">;</span>        <span class="token comment">// 进程当前的运行状态</span>
+    <span class="token keyword keyword-void">void</span> <span class="token operator">*</span>chan<span class="token punctuation">;</span>                  <span class="token comment">// 进程等待的通道，如果非空，则表示进程正在休眠等待某个事件发生</span>
+    <span class="token keyword keyword-int">int</span> killed<span class="token punctuation">;</span>                  <span class="token comment">// 表示进程是否被杀死</span>
+    <span class="token keyword keyword-int">int</span> xstate<span class="token punctuation">;</span>                  <span class="token comment">// 返回给父进程 wait 的退出状态</span>
+    <span class="token keyword keyword-int">int</span> pid<span class="token punctuation">;</span>                     <span class="token comment">// 进程 ID，唯一标识一个进程</span>
+
+    <span class="token comment">// wait_lock must be held when using this:</span>
+    <span class="token keyword keyword-struct">struct</span> <span class="token class-name">proc</span> <span class="token operator">*</span>parent<span class="token punctuation">;</span>         <span class="token comment">// 父进程指针，指向当前进程的父进程</span>
+
+    <span class="token comment">// these are private to the process, so p-&gt;lock need not be held.</span>
+    uint64 kstack<span class="token punctuation">;</span>               <span class="token comment">// 内核栈的虚拟地址，用于保存进程的内核执行栈</span>
+    uint64 sz<span class="token punctuation">;</span>                   <span class="token comment">// 进程内存的大小（字节），表示进程占用的内存空间大小</span>
+    <span class="token class-name">pagetable_t</span> pagetable<span class="token punctuation">;</span>       <span class="token comment">// 用户页表，用于管理进程的虚拟地址空间</span>
+    <span class="token keyword keyword-struct">struct</span> <span class="token class-name">trapframe</span> <span class="token operator">*</span>trapframe<span class="token punctuation">;</span> <span class="token comment">// 用户态中断帧，用于保存用户态执行的上下文信息</span>
+    <span class="token keyword keyword-struct">struct</span> <span class="token class-name">context</span> context<span class="token punctuation">;</span>      <span class="token comment">// 进程上下文，用于进行进程间的上下文切换</span>
+    <span class="token keyword keyword-struct">struct</span> <span class="token class-name">file</span> <span class="token operator">*</span>ofile<span class="token punctuation">[</span>NOFILE<span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 打开文件数组，用于存储进程打开的文件描述符</span>
+    <span class="token keyword keyword-struct">struct</span> <span class="token class-name">inode</span> <span class="token operator">*</span>cwd<span class="token punctuation">;</span>           <span class="token comment">// 当前工作目录</span>
+    <span class="token keyword keyword-char">char</span> name<span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>               <span class="token comment">// 进程名字（用于调试）</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p>可以看出，一个进程和它的页表通过 <code>pagetable_t pagetable;</code> 联系在一起。</p>
+<ul>
+<li>
+<h5>创建进程</h5>
+在 main 初始化了一些设备和子系统后，它通过调用 <code>userinit</code> 建立了第一个进程,它首先调用 <code>allocproc</code> 分配结构体 <code>struct proc</code> 并对其进行初始化。 <code>allocproc</code> 在每个进程被创建时都会被调用。<br>
+（ <code>userinit</code> 和 <code>allocproc</code> 都在 <code>proc.c</code> 中 ）</li>
+</ul>
+</li>
+</ul>
+<h3 id="作业一">作业一 </h3>
+<p>在xv6中，如果用户态调用系统调用，就会切换到内核态，这中间一定是有开销的，至少CPU要保存用户态进程的上下文，然后CPU被内核占有，系统调用完成后再切换回来。作业一本质是加速 getpid() ，思路是为每一个进程多分配一个虚拟地址位于 USYSCALL 的页，然后这个页的开头保存一个 usyscall 结构体，结构体中存放这个进程的 pid</p>
+<ul>
+<li>创建每个进程时，在 USYSCALL 处映射一个只读页面（在 memlayout.h 中定义的 VA ）。</li>
+<li>在此页面的开头，存储一个 struct usyscall （也在 memlayout.h 中定义），并初始化它以存储当前进程的 PID 。</li>
+<li>对于本实验， ugetpid() 已在用户空间端提供，并将自动使用 USYSCALL 映射。</li>
+<li>要求运行 pgtbltest 时 ugetpid 测试用例通过。</li>
+</ul>
+<h4 id="实验思路">实验思路 </h4>
+<p>在 xv6 中，结构体 proc 本身存储在内核空间中，如果用户空间需要访问进程控制块（struct proc）中的内容（例如 pid），通常需要通过系统调用来实现。<br>
+而用户空间可以通过页表访问自己的虚拟地址空间中的物理内存，因此，考虑把 pid 直接放到物理内存中来加速访问。</p>
+<ul>
+<li>
+<h5>struct proc</h5>
+<p>上文中给出了该结构体的代码部分，其中 <code>struct trapframe *trapframe;</code> 用于存储指向当前进程的陷阱帧（trap frame）的指针，<strong>每个进程的陷阱帧通常会被分配一个单独的页面。</strong> 从而确保在发生中断、异常或系统调用时，处理器状态（包括寄存器值、程序计数器等）有一个专门的地方进行保存和恢复。<br>
+因此，我们可以仿照其来实现目标页面的分配。<br>
+首先，已有定义在 <code>memlayout.h</code> 的结构体：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-struct">struct</span> <span class="token class-name">usyscall</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-int">int</span> pid<span class="token punctuation">;</span>  <span class="token comment">// Process ID</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p>所以我们只需在 <code>struct proc</code> 中加入字段：<br>
+<code>struct usyscall *usyscall;   // 指向用户态系统调用结构的指针</code></p>
+</li>
+<li>
+<h5>proc.c / allocproc</h5>
+<p>在创建一个进程时，通常会对 struct proc 结构体进行初始化。</p>
+<ul>
+<li>系统中有一个 struct proc 数组，存储了系统中所有进程的信息，用于在系统运行时创建、销毁和管理进程。</li>
+<li><strong>涉及的重要函数</strong><br>
+<strong><code>kalloc()</code></strong> :<br>
+负责从操作系统的内存池中分配一块固定大小的内存块，并返回指向该内存块的指针。分配的内存块通常是物理页面（或者页帧），大小通常是操作系统的页面大小（在 xv6 中通常是 4KB）的整数倍。<br>
+<strong><code>void *memmove(void *dest, const void *src, size_t n)</code></strong> :<br>
+将源地址的数据复制到目标地址中</li>
+<li><strong>对 trapframe 的操作</strong><pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>trapframe <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">trapframe</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">kalloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">freeproc</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">release</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>p<span class="token operator">-&gt;</span>lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>这段代码给陷阱帧分配了一个物理页面，并返回指向该内存块的指针。如果分配失败，就调用 <code>freeproc()</code> 清理和回收进程结构体及其相关资源（如内存、页表等）。</li>
+<li><strong>添加代码段</strong><br>
+只需仿照上面的代码来分配 usyscall 的页面：<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>usyscall <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">usyscall</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">kalloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">freeproc</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">release</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>p<span class="token operator">-&gt;</span>lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>除此之外还需要将 pid 的值存储到该物理页中，采用 <code>memmove()</code> 函数实现：<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">memmove</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>usyscall<span class="token punctuation">,</span><span class="token operator">&amp;</span>p<span class="token operator">-&gt;</span>pid<span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>因为 pid 是 int 型的，所以复制字节数为 4</li>
+</ul>
+</li>
+<li>
+<h5>proc.c / proc_pagetable</h5>
+<p>该函数用于为一个进程创建一个用户页表，并映射必要的页面到该页表中；每个进程都有自己的页表，用于将虚拟地址映射到物理地址。</p>
+<ul>
+<li>
+<p><strong>涉及的重要函数</strong><br>
+<strong><code>uvmcreate()</code></strong> ：<br>
+用于创建一个空的页表并返回其指针<br>
+<strong><code>mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)</code></strong> :<br>
+主要用于在页表中建立虚拟地址到物理地址的映射关系，以便于进程在访问这些虚拟地址时能够正确地访问对应的物理内存。</p>
+<ul>
+<li>pagetable_t pagetable：页表指针，表示要操作的页表。</li>
+<li>uint64 va：虚拟地址的起始地址。</li>
+<li>uint64 size：需要映射的内存大小。</li>
+<li>uint64 pa：物理地址的起始地址。</li>
+<li>int perm：权限位，包括读、写、执行权限。</li>
+</ul>
+<p><strong><code>uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free)</code></strong> ：<br>
+修改进程的页表，删除指定的虚拟地址范围的映射，并释放对应的物理页。<br>
+<strong><code>uvmfree()</code></strong> ：<br>
+释放页表及其引用的所有物理内存页面的函数。</p>
+</li>
+<li>
+<p><strong>函数执行流程</strong><br>
+创建完页表后，开始建立各页面的虚拟地址和物理地址间的映射关系。</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token comment">// 映射跳板代码（用于系统调用返回）到最高的用户虚拟地址。</span>
+<span class="token comment">// 只有内核态使用它，在进入/离开用户空间时使用，因此没有 PTE_U 标志。</span>
+<span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token function">mappages</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAMPOLINE<span class="token punctuation">,</span> PGSIZE<span class="token punctuation">,</span>
+            <span class="token punctuation">(</span>uint64<span class="token punctuation">)</span>trampoline<span class="token punctuation">,</span> PTE_R <span class="token operator">|</span> PTE_X<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">uvmfree</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 映射 trapframe 到 TRAMPOLINE 下方，用于 trampoline.S。</span>
+<span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token function">mappages</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAPFRAME<span class="token punctuation">,</span> PGSIZE<span class="token punctuation">,</span>
+            <span class="token punctuation">(</span>uint64<span class="token punctuation">)</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>trapframe<span class="token punctuation">)</span><span class="token punctuation">,</span> PTE_R <span class="token operator">|</span> PTE_W<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">uvmunmap</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAMPOLINE<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">uvmfree</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>原先给出的代码中给出了两个页面的映射关系建立，若映射失败则解除虚拟地址与物理地址之间的映射，释放所有物理页并删除页表。</p>
+</li>
+<li>
+<p><strong>添加代码段</strong><br>
+我们只需要在上述代码段的下方仿照其过程创建 usyscall 物理地址与虚拟地址间的映射关系，并处理好映射失败后的释放即可。注意！若分配失败应该对前面映射的两个页面都进行释放。<br>
+xv6 已经在 <code>memlayout.h</code> 中定义了 USYSCALL 页面的虚拟地址: <code>#define USYSCALL (TRAPFRAME - PGSIZE)</code>，这代表在虚拟地址中，USYSCALL 是 TRAPFRAME 前面的一个页面。<br>
+另外，要设置标志位使得该页面具有读权限（PTE_R）并且可以被用户模式（PTE_U）下的进程访问。</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token function">mappages</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> USYSCALL<span class="token punctuation">,</span> PGSIZE<span class="token punctuation">,</span>
+            <span class="token punctuation">(</span>uint64<span class="token punctuation">)</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>usyscall<span class="token punctuation">)</span><span class="token punctuation">,</span> PTE_R <span class="token operator">|</span> PTE_U<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">uvmunmap</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAMPOLINE<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">uvmunmap</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAPFRAME<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">uvmfree</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+<li>
+<p><strong>疑问</strong><br>
+我一开始以为标志位都是 0 或者 1，所以好奇为什么通过按位或可以判断各标志位的设置情况，通过查看定义，发现它们的设置如下：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PTE_V</span> <span class="token expression"><span class="token punctuation">(</span><span class="token number">1L</span> <span class="token operator">&lt;&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> </span><span class="token comment">// valid</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PTE_R</span> <span class="token expression"><span class="token punctuation">(</span><span class="token number">1L</span> <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PTE_W</span> <span class="token expression"><span class="token punctuation">(</span><span class="token number">1L</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PTE_X</span> <span class="token expression"><span class="token punctuation">(</span><span class="token number">1L</span> <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PTE_U</span> <span class="token expression"><span class="token punctuation">(</span><span class="token number">1L</span> <span class="token operator">&lt;&lt;</span> <span class="token number">4</span><span class="token punctuation">)</span> </span><span class="token comment">// 1 -&gt; user can access</span></span>
+</code></pre><p>这样就能保证按位或的时候能有区分。</p>
+</li>
+</ul>
+</li>
+<li>
+<h5>proc.c / freeproc</h5>
+<p>当一个进程终止或失败时，需要释放分配给它的所有资源，包括内存、页表和其他内核资源。 freeproc 用于释放与进程相关的资源。</p>
+<ul>
+<li><strong>涉及的重要函数</strong><br>
+<strong><code>kfree()</code></strong> ：<br>
+用于释放先前通过 kalloc 分配的内存。</li>
+<li><strong>对其他页的操作</strong><pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>trapframe<span class="token punctuation">)</span>
+    <span class="token function">kfree</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token punctuation">)</span>p<span class="token operator">-&gt;</span>trapframe<span class="token punctuation">)</span><span class="token punctuation">;</span>
+p<span class="token operator">-&gt;</span>trapframe <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></li>
+<li><strong>添加代码段</strong><br>
+所以我们只需仿照上方释放陷阱帧页面的代码来释放 usyscall 页面即可。<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>usyscall<span class="token punctuation">)</span>
+    <span class="token function">kfree</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token punctuation">)</span>p<span class="token operator">-&gt;</span>usyscall<span class="token punctuation">)</span><span class="token punctuation">;</span>
+p<span class="token operator">-&gt;</span>usyscall <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<h5>proc.c / proc_freepagetable</h5>
+<p>用于释放进程页表及其所有用户内存,遍历并释放页表中的每一个用户页面，最后释放整个页表。</p>
+<ul>
+<li><strong>对其他页的操作</strong><pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">uvmunmap</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAMPOLINE<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">uvmunmap</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> TRAPFRAME<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></li>
+<li><strong>添加代码段</strong><pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">uvmunmap</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span>USYSCALL<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h4 id="运行结果">运行结果 </h4>
+<img src="1.jpg" height="80px">
+<h3 id="作业二">作业二 </h3>
+<p>递归遍历页表，碰到有效的就遍历进下一层页表，打印页表内容</p>
+<ul>
+<li>定义一个名为 vmprint() 的函数。它应该使用 pagetable_t 参数，并以下面描述的格式打印该页表。<pre data-role="codeBlock" data-info="" class="language-text"><code>page table 0x0000000087f6e000
+..0: pte 0x0000000021fda801 pa 0x0000000087f6a000
+.. ..0: pte 0x0000000021fda401 pa 0x0000000087f69000
+.. .. ..0: pte 0x0000000021fdac1f pa 0x0000000087f6b000
+.. .. ..1: pte 0x0000000021fda00f pa 0x0000000087f68000
+.. .. ..2: pte 0x0000000021fd9c1f pa 0x0000000087f67000
+..255: pte 0x0000000021fdb401 pa 0x0000000087f6d000
+.. ..511: pte 0x0000000021fdb001 pa 0x0000000087f6c000
+.. .. ..509: pte 0x0000000021fdd813 pa 0x0000000087f76000
+.. .. ..510: pte 0x0000000021fddc07 pa 0x0000000087f77000
+.. .. ..511: pte 0x0000000020001c0b pa 0x0000000080007000
+</code></pre></li>
+<li>在 exec.c 中 return argc 之前插入 if(p-&gt;pid==1) vmprint(p-&gt;pagetable) ，以打印第一个进程的页表，并通过 make Grade 的 PTE 打印输出测试</li>
+</ul>
+<h4 id="实验思路-1">实验思路 </h4>
+<h5 id="输出的内容">输出的内容 </h5>
+<p>首先了解一下要打印的内容，我们要打印的是各级页表及其内容。</p>
+<ul>
+<li>
+<h5>总体结构</h5>
+<ul>
+<li>页表起始地址:<br>
+<code>page table 0x0000000087f6e000</code><br>
+这个地址指向的是页表结构在内存中的位置。</li>
+<li>页表项 (PTE):
+<ul>
+<li><code>..0: pte 0x0000000021fda801 pa 0x0000000087f6a000</code><br>
+每个条目前的 .. 表示这是一个层级结构。<br>
+0: 表示这是页表中的第 0 项。<br>
+pte 0x0000000021fda801 是页表项的内容。<br>
+pa 0x0000000087f6a000 是页表项指向的物理地址。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5>逐层解释</h5>
+<ul>
+<li>第一层 (L1) 页表项
+<ul>
+<li><code>..0: pte 0x0000000021fda801 pa 0x0000000087f6a000</code><br>
+这是一级页表中的第 0 项，pte 的值是 0x21fda801。<br>
+该页表项指向一个物理地址 0x87f6a000，这是下一级 (L2) 页表的位置。</li>
+</ul>
+</li>
+<li>第二层 (L2) 页表项
+<ul>
+<li><code>.. ..0: pte 0x0000000021fda401 pa 0x0000000087f69000</code><br>
+这是二级页表中的第 0 项，pte 的值是 0x21fda401。<br>
+该页表项指向物理地址 0x87f69000，这是下一级 (L3) 页表的位置。</li>
+</ul>
+</li>
+<li>第三层 (L3) 页表项
+<ul>
+<li><code>.. .. ..0: pte 0x0000000021fdac1f pa 0x0000000087f6b000</code><br>
+第 0 项 pte 值为 0x21fdac1f，指向物理地址 0x87f6b000。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="学习递归遍历页表">学习递归遍历页表 </h5>
+<p><code>freewalk()</code> 函数通过递归的方式逐层释放页表，所以可以先学习该函数再仿照其完成递归打印的功能。<br>
+以下是对函数的具体注释：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">freewalk</span><span class="token punctuation">(</span><span class="token class-name">pagetable_t</span> pagetable<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token comment">// 一个页表中有 2^9 = 512 个页表项。</span>
+  <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">512</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 获取当前索引 i 处的页表项。</span>
+    <span class="token class-name">pte_t</span> pte <span class="token operator">=</span> pagetable<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 如果页表项有效且不指向物理页面，这意味着这是一个指向下级页表的 PTE</span>
+    <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pte <span class="token operator">&amp;</span> PTE_V<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>pte <span class="token operator">&amp;</span> <span class="token punctuation">(</span>PTE_R<span class="token operator">|</span>PTE_W<span class="token operator">|</span>PTE_X<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment">// 将 PTE 转换为物理地址，表示下一级页表。</span>
+      uint64 child <span class="token operator">=</span> <span class="token function">PTE2PA</span><span class="token punctuation">(</span>pte<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 递归调用 freewalk 函数释放下一级页表。</span>
+      <span class="token function">freewalk</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">pagetable_t</span><span class="token punctuation">)</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 递归释放完成后，将当前 PTE 清零。</span>
+      pagetable<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>pte <span class="token operator">&amp;</span> PTE_V<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment">// 如果 PTE 有效但不是指向下级页表的，</span>
+      <span class="token comment">// 说明这是一个叶节点，触发一个 panic 错误。</span>
+      <span class="token function">panic</span><span class="token punctuation">(</span><span class="token string">"freewalk: leaf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 释放当前页表的内存。</span>
+  <span class="token function">kfree</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token punctuation">)</span>pagetable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>页表项有效 : PTE_V 被设置</li>
+<li>不指向一个物理页 : 没有 PTE_R、PTE_W 或 PTE_X 标志<br>
+<img src="2.jpg" height="170px"></li>
+</ul>
+<h5 id="实现流程">实现流程 </h5>
+<p>vm.c 是 xv6 操作系统的虚拟内存管理代码文件，负责管理虚拟内存和物理内存之间的映射，所以我们的打印函数应该放在该文件中。</p>
+<ul>
+<li>
+<h5>vm.c / printwalk() &amp; vmprint()</h5>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">printwalk</span><span class="token punctuation">(</span><span class="token class-name">pagetable_t</span> pagetable<span class="token punctuation">,</span> uint level<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-char">char</span><span class="token operator">*</span> prefix<span class="token punctuation">;</span>
+
+    <span class="token comment">// 根据level设置前缀，用于美化输出格式</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>level <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> 
+        prefix <span class="token operator">=</span> <span class="token string">".."</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>level <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> 
+        prefix <span class="token operator">=</span> <span class="token string">".. .."</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-else">else</span> 
+        prefix <span class="token operator">=</span> <span class="token string">".. .. .."</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 遍历页表中的每一项</span>
+    <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">512</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 每个页表有512项</span>
+        <span class="token class-name">pte_t</span> pte <span class="token operator">=</span> pagetable<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// 检查页表项是否有效</span>
+        <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>pte <span class="token operator">&amp;</span> PTE_V<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 该页表项有效</span>
+            <span class="token comment">// 获取物理地址</span>
+            uint64 pa <span class="token operator">=</span> <span class="token function">PTE2PA</span><span class="token punctuation">(</span>pte<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 将虚拟地址转换为物理地址</span>
+
+            <span class="token comment">// 打印当前页表项的信息</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s%d: pte %p pa %p\n"</span><span class="token punctuation">,</span> prefix<span class="token punctuation">,</span> i<span class="token punctuation">,</span> pte<span class="token punctuation">,</span> pa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// 如果页表项不是叶子节点（即指向下一级页表）</span>
+            <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pte <span class="token operator">&amp;</span> <span class="token punctuation">(</span>PTE_R<span class="token operator">|</span>PTE_W<span class="token operator">|</span>PTE_X<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 有下一级页表</span>
+                <span class="token comment">// 递归调用printwalk，处理下一级页表</span>
+                <span class="token function">printwalk</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">pagetable_t</span><span class="token punctuation">)</span>pa<span class="token punctuation">,</span> level <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">vmprint</span><span class="token punctuation">(</span><span class="token class-name">pagetable_t</span> pagetable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 打印顶级页表的起始地址</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"page table %p\n"</span><span class="token punctuation">,</span> pagetable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 调用printwalk函数，开始递归打印页表内容</span>
+    <span class="token function">printwalk</span><span class="token punctuation">(</span>pagetable<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li><code>pagetable_t</code> 是一个指向 64 位无符号整数数组的指针，每个 64 位无符号整数都是一个页表项（PTE）。</li>
+<li>xv6 使用三层页表结构 :
+<ul>
+<li>顶级页表（Level 2）: 最顶层的页表，包含 512 个页表项。</li>
+<li>中间页表（Level 1）: 中间层的页表，每个页表包含 512 个页表项。</li>
+<li>叶子页表（Level 0）: 最底层的页表，每个页表包含 512 个页表项。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5>defs.h</h5>
+该文件包含函数声明、宏定义以及一些通用的声明，为多个源文件提供了共享的接口和定义。<br>
+在该文件中声明 vmprint() ,以便 exec.c 调用：<pre data-role="codeBlock" data-info="h" class="language-h h"><code>void vmprint(pagetable_t pagetable);
+</code></pre></li>
+<li>
+<h5>exec.c</h5>
+该文件负责实现 exec 系统调用，exec 系统调用的作用是加载并执行一个新的可执行文件，从而替换当前进程的内存映像。这个过程会销毁当前进程的用户地址空间，并创建一个新的地址空间，其中加载了指定的可执行文件。这样，可以让当前进程执行一个新的程序。<br>
+题目要求在 exec.c 中 <code>return argc</code> 之前插入 <code>if(p-&gt;pid==1) vmprint(p-&gt;pagetable)</code> ，以打印第一个进程的页表，照做即可。</li>
+</ul>
+<h4 id="运行结果-1">运行结果 </h4>
+<img src="3.jpg" height="50px">
+<img src="pte.jpg">
+<h2 id="总结">总结 </h2>
+<p>在完成这两个作业的过程中，我对 xv6 操作系统的内存管理机制有了更深入的了解。</p>
+<ul>
+<li>
+<h4>作业一</h4>
+<ul>
+<li>深入理解了虚拟页面和物理页面的关系</li>
+<li>学会了如何在 xv6 中为进程分配特定的虚拟地址</li>
+<li>学会了建立虚拟地址和物理地址间的映射关系</li>
+</ul>
+</li>
+<li>
+<h4>作业二</h4>
+<ul>
+<li>进一步加深了对页表的理解</li>
+<li>学会了如何在 xv6 中实现对页表的操作和遍历</li>
+<li>了解了 exec 系统调用</li>
+</ul>
+</li>
+</ul>
+<p>通过这次实验，我加深了对操作系统和页表的理解。同时，实验反思与总结的过程也帮助我巩固了所学知识，并对下一步的学习和实践提供了方向和动力。</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
